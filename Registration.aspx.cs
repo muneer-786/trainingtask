@@ -13,5 +13,15 @@ namespace trainingtask
         {
 
         }
+
+        protected void RadioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void TextBox8_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

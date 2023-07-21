@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>sign up</title>
     <style type="text/css">
         .auto-style1 {
             height: 67px;
@@ -18,11 +18,11 @@
             z-index: 1;
         }
         .auto-style2 {
-            width: 1214px;
-            height: 703px;
+            width: 646px;
+            height: 636px;
             position: absolute;
-            top: 142px;
-            left: 11px;
+            top: 115px;
+            left: 308px;
             z-index: 1;
         }
         .auto-style3 {
@@ -30,37 +30,17 @@
             border-style: solid;
             border-width: 1px;
             background-color: #CCCCCC;
+            margin-left:5px;
+        }
+        .tr-data{
+            height:10px;
+            margin-bottom:5px;
         }
         .auto-style4 {
-            width: 202px;
+            height: 10px;
         }
         .auto-style5 {
-            width: 202px;
-            height: 39px;
-        }
-        .auto-style6 {
-            height: 39px;
-            width: 387px;
-        }
-        .auto-style7 {
-            width: 255px;
-        }
-        .auto-style8 {
-            width: 387px;
-        }
-        .auto-style9 {
-            width: 202px;
-            height: 42px;
-        }
-        .auto-style10 {
-            width: 387px;
-            height: 42px;
-        }
-        .auto-style11 {
-            height: 42px;
-        }
-        .auto-style12 {
-            height: 39px;
+            text-align: center;
         }
     </style>
 </head>
@@ -71,134 +51,115 @@
         <div class="auto-style2">
 
             <table cellpadding="5" class="auto-style3">
-                <tr>
-                    <td class="auto-style5">First name:</td>
-                    <td class="auto-style6">
-                        <asp:TextBox ID="TextBox1" runat="server" Height="24px" Width="336px"></asp:TextBox>
-                    </td>
-                    <td class="auto-style7">Email:</td>
-                    <td>
-                        <asp:TextBox ID="TextBox7" runat="server" Height="24px" Width="336px"></asp:TextBox>
+                <tr class="tr-data">
+                    <td class="td-data">First name:</td>
+                    <td class="td-data">
+                        <asp:TextBox ID="TextBox12" runat="server" Height="24px" Width="336px"></asp:TextBox>
                     </td>
                 </tr>
-                <tr>
-                    <td class="auto-style5"></td>
-                    <td class="auto-style6"></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td class="auto-style4">Last name:</td>
-                    <td class="auto-style8">
-                        <asp:TextBox ID="TextBox2" runat="server" Height="24px" Width="336px"></asp:TextBox>
-                    </td>
-                    <td>Address:</td>
-                    <td>
-                        <asp:TextBox ID="TextBox8" runat="server" Height="24px" TextMode="MultiLine" Width="336px"></asp:TextBox>
+               
+                 <tr class="tr-data">
+                    <td class="td-data">Last name:</td>
+                    <td class="td-data">
+                        <asp:TextBox ID="TextBox13" runat="server" Height="24px" Width="336px"></asp:TextBox>
                     </td>
                 </tr>
-                <tr>
-                    <td class="auto-style4">&nbsp;</td>
-                    <td class="auto-style8">&nbsp;</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td class="auto-style4">D.o.b</td>
-                    <td class="auto-style8">
-                        <asp:TextBox ID="TextBox3" runat="server" Height="24px" Width="336px"></asp:TextBox>
-                    </td>
-                    <td>State:</td>
-                    <td>
-                        <asp:DropDownList ID="DropDownList1" runat="server" Height="19px" Width="334px">
-                        </asp:DropDownList>
+               
+                 <tr class="tr-data">
+                    <td class="td-data">Date of birth</td>
+                    <td class="td-data">
+                        &nbsp;<asp:TextBox ID="TextBox17" runat="server" Height="24px" Width="336px" TextMode="Date"></asp:TextBox>
                     </td>
                 </tr>
-                <tr>
-                    <td class="auto-style4">&nbsp;</td>
-                    <td class="auto-style8">&nbsp;</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td class="auto-style4">Age:</td>
-                    <td class="auto-style8">
-                        <asp:TextBox ID="TextBox4" runat="server" Height="24px" Width="336px"></asp:TextBox>
-                    </td>
-                    <td>City:</td>
-                    <td>
-                        <asp:DropDownList ID="DropDownList2" runat="server" Height="19px" Width="334px">
-                        </asp:DropDownList>
+               
+                 <tr class="tr-data">
+                    <td class="td-data">Age:</td>
+                    <td class="td-data">
+                        <asp:TextBox ID="TextBox18" runat="server" Height="24px" Width="336px"></asp:TextBox>
                     </td>
                 </tr>
-                <tr>
-                    <td class="auto-style4">&nbsp;</td>
-                    <td class="auto-style8">&nbsp;</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td class="auto-style9">Gender:</td>
-                    <td class="auto-style10">
-                        <asp:TextBox ID="TextBox6" runat="server" Height="24px" Width="336px"></asp:TextBox>
+                
+                 <tr class="tr-data">
+                    <td class="td-data">Gender:</td>
+                    <td class="td-data">
+                        <asp:RadioButton ID="RadioButton1" runat="server" GroupName="Gender" Text="Male" />
+&nbsp;
+                        <asp:RadioButton ID="RadioButton2" runat="server" GroupName="Gender" Text="Female" />
+&nbsp;&nbsp;
+                        <asp:RadioButton ID="RadioButton3" runat="server" GroupName="Gender" OnCheckedChanged="RadioButton3_CheckedChanged" Text="Other" />
                     </td>
-                    <td class="auto-style11">Username:</td>
-                    <td class="auto-style11">
+                </tr>
+                
+                 <tr class="tr-data">
+                    <td class="td-data">Phone number:</td>
+                    <td class="td-data">
+                        <asp:TextBox ID="TextBox15" runat="server" Height="24px" Width="336px"></asp:TextBox>
+                    </td>
+                </tr>
+                
+                 <tr class="tr-data">
+                    <td class="auto-style4">Email address:</td>
+                    <td class="auto-style4">
+                        <asp:TextBox ID="TextBox16" runat="server" Height="24px" Width="336px"></asp:TextBox>
+                    </td>
+                </tr>
+                
+                 <tr class="tr-data">
+                    <td class="auto-style4">Address:</td>
+                    <td class="auto-style4">
+                        <asp:TextBox ID="TextBox8" runat="server" Height="69px" Width="333px" OnTextChanged="TextBox8_TextChanged" TextMode="MultiLine"></asp:TextBox>
+                    </td>
+                </tr>
+                
+                 <tr class="tr-data">
+                    <td class="td-data">State:</td>
+                    <td class="td-data">
+                        &nbsp;</td>
+                </tr>
+                
+                 <tr class="tr-data">
+                    <td class="td-data">District:</td>
+                    <td class="td-data">
+                        &nbsp;</td>
+                </tr>
+                
+                 <tr class="tr-data">
+                    <td class="td-data">User name:</td>
+                    <td class="td-data">
                         <asp:TextBox ID="TextBox9" runat="server" Height="24px" Width="336px"></asp:TextBox>
                     </td>
                 </tr>
-                <tr>
-                    <td class="auto-style4">&nbsp;</td>
-                    <td class="auto-style8">&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style4">Phonenumber:</td>
-                    <td class="auto-style8">
-                        <asp:TextBox ID="TextBox5" runat="server" Height="24px" Width="336px"></asp:TextBox>
-                    </td>
-                    <td>Password:</td>
-                    <td>
+                
+                 <tr class="tr-data">
+                    <td class="td-data">Password:</td>
+                    <td class="td-data">
                         <asp:TextBox ID="TextBox10" runat="server" Height="24px" Width="336px"></asp:TextBox>
                     </td>
                 </tr>
-                <tr>
-                    <td class="auto-style4">&nbsp;</td>
-                    <td class="auto-style8">&nbsp;</td>
-                    <td>Re enter password:</td>
-                    <td>
+                
+                 <tr class="tr-data">
+                    <td class="td-data">Confirm password:</td>
+                    <td class="td-data">
                         <asp:TextBox ID="TextBox11" runat="server" Height="24px" Width="336px"></asp:TextBox>
                     </td>
                 </tr>
-                <tr>
-                    <td class="auto-style4">&nbsp;</td>
-                    <td class="auto-style8">&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                
+                 <tr class="tr-data">
+                    <td class="td-data">&nbsp;</td>
+                    <td class="td-data">
+                        &nbsp;</td>
                 </tr>
-                <tr>
-                    <td class="auto-style5"></td>
-                    <td class="auto-style6"></td>
-                    <td class="auto-style12"></td>
-                    <td class="auto-style12"></td>
+                
+                 <tr class="tr-data">
+                    <td class="auto-style5" colspan="2">
+                        <asp:Button ID="Button1" runat="server" Text="Submit" />
+                     </td>
                 </tr>
-                <tr>
-                    <td class="auto-style5"></td>
-                    <td class="auto-style6"></td>
-                    <td class="auto-style12" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="Button1" runat="server" BackColor="White" BorderStyle="None" Height="31px" Text="Register" Width="246px" />
-                    </td>
-                </tr>
-                <tr>
-                    <td class="auto-style5">&nbsp;</td>
-                    <td class="auto-style6">&nbsp;</td>
-                    <td class="auto-style12">&nbsp;</td>
-                    <td class="auto-style12">&nbsp;</td>
-                </tr>
+                
             </table>
 
         </div>
+
     </form>
 </body>
 </html>
