@@ -56,10 +56,15 @@
         .auto-style13 {
             height: 30px;
         }
+        .validation-error{
+            border-color:red;
+            border-style:solid;
+
+        }
     </style>
 </head>
 <body style="height: 65px">
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" onsubmit="return validateform()">
        
         <div class="auto-style1"><span class="auto-style2">Login</span> </div>
         <div style="text-align: center" class="auto-style6">
@@ -71,7 +76,8 @@
                 <tr>
                     <td class="auto-style8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Username:</td>
                     <td class="auto-style9">
-                        <asp:TextBox ID="TextBox1" runat="server" Width="258px"></asp:TextBox>
+                        <asp:TextBox ID="username" runat="server" Width="258px"></asp:TextBox>
+                    &nbsp;<asp:Label ID="usernametext" runat="server"></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -81,7 +87,8 @@
                 <tr>
                     <td class="auto-style8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Password:</td>
                     <td class="auto-style9">
-                        <asp:TextBox ID="TextBox2" runat="server" Width="261px"></asp:TextBox>
+                        <asp:TextBox ID="password" runat="server" Width="261px"></asp:TextBox>
+                    &nbsp;<asp:Label ID="passwordtext" runat="server"></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -89,13 +96,13 @@
                     <td class="auto-style11"></td>
                 </tr>
                 <tr>
-                    <td class="auto-style4">&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style10"></td>
+                    <td class="auto-style11"></td>
                 </tr>
                 <tr>
                     <td class="auto-style7" colspan="2">
-                        <asp:Button ID="Button1" runat="server" BackColor="#CCCCCC" BorderColor="#66FF99" BorderStyle="Solid" BorderWidth="1px" Height="24px" Text="Sign in" Width="258px" />
-                    </td>
+                        <input type="submit" value="Sign in" />
+                        </td>
                 </tr>
                 <tr>
                     <td class="auto-style4">&nbsp;</td>
@@ -120,7 +127,40 @@
                 </tr>
             </table>
         </div>
+        
     </form>
         
+    <script>  
+        function validateform() {
+            var name = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var valid = 1;
+            document.getElementById("username").classList.remove("validation-error");
+            document.getElementById("password").classList.remove("validation-error");
+            document.getElementById("usernametext").innerHTML = "";
+            document.getElementById("passwordtext").innerHTML = "";
+
+            if (name == null || name == "") {
+                document.getElementById("username").classList.add("validation-error");
+                document.getElementById("usernametext").innerHTML = "*Required";
+                valid=0;
+            }
+            if (password == null || password == "") {
+                document.getElementById("password").classList.add("validation-error");
+                document.getElementById("passwordtext").innerHTML = "*Required";
+                valid = 0;
+            }
+            else if (password.length < 6) {
+                document.getElementById("password").classList.add("validation-error");
+                document.getElementById("passwordtext").innerHTML = "6 Characters Requierd";
+                valid = 0;
+            }
+
+            
+            if (valid == 0) {
+                return false;
+            }
+        }  
+    </script>
 </body>
 </html>
