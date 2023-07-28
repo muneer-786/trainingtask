@@ -13,8 +13,8 @@
             font-size: x-large;
             width: 1214px;
             position: absolute;
-            top: 47px;
-            left: 10px;
+            top: 63px;
+            left: 19px;
             z-index: 1;
         }
         .auto-style2 {
@@ -42,46 +42,165 @@
         .auto-style5 {
             text-align: center;
         }
+         ul {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     overflow: hidden;
+     background-color: #333;
+     }
+
+      li {
+      float: left;
+        }
+
+     li a, .dropbtn {
+       display: inline-block;
+       color: white;
+       text-align: center;
+       padding: 14px 16px;
+       text-decoration: none;
+     }
+
+     li a:hover, .dropdown:hover .dropbtn {
+       background-color: red;
+     }
+
+     li.dropdown {
+       display: inline-block;
+     }
+     .dropdown-content a {
+       color: black;
+       padding: 12px 16px;
+       text-decoration: none;
+       display: block;
+       text-align: left;
+     }
+
+     .dropdown-content a:hover {background-color: #f1f1f1;}
+      .style4 {
+      height:500px;
+      }
+      .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height:10%;
+        background-color:#333;
+        color: white;
+        text-align: center;
+      }
+       .footer-icons
+       {
+           width:15px;
+       }
+        .auto-style6 {
+            width: 414px;
+        }
+        .auto-style7 {
+            height: 10px;
+            width: 414px;
+        }
+        body{
+            background-image: url('IMAGES/background.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed; 
+            background-size: 100% 100%;
+           }
+        }
+        .auto-style8 {
+            color: #FFFFFF;
+            font-weight: bold;
+        }
+         .footer {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height:10%;
+            background-color:#333;
+            color: white;
+            text-align: center;
+         }
+         .footer-icons
+         {
+            width:15px;
+         }
+
+        .auto-style9 {
+            position: absolute;
+            left: 11px;
+            bottom: -238px;
+            width: 100%;
+            height: 10%;
+            color: white;
+            text-align: center;
+            background-color: #333;
+        }
+        .p-style {
+           font-size: x-small;
+       }
+
+        .auto-style10 {
+            width: 334px;
+            height: 32px;
+        }
+        .auto-style11 {
+            width: 331px;
+            height: 32px;
+        }
+
     </style>
 </head>
-<body>
+<body> 
+    <div>
+    <ul>
+  
+        <li style="float:right"><a class="active" href="login.aspx">Login</a></li>
+        <li style="float:right"><a class="active" href="aboutus.aspx">About us</a></li>
+        <li style="float:right"><a class="active" href="contactus.aspx">Contact us</a></li>
+       <li style="float:right"><a class="active" href="Homepage.aspx">Home</a></li>
+</ul>
+        </div>
     <form id="form1" runat="server" >
         <div class="auto-style1">
-            Registration Form</div>
+            
+            <span class="auto-style8">Sign up</span></div>
         <div class="auto-style2">
 
-            <table cellpadding="5" class="auto-style3">
+            <table cellpadding="5" class="auto-style3" style="background-color: #66FFFF">
                 <tr class="tr-data">
                     <td class="td-data">First name:</td>
-                    <td class="td-data">
-                        <asp:TextBox ID="TextBox12" runat="server" Height="24px" Width="336px" onfocusout="myFunction()"></asp:TextBox>
+                    <td class="auto-style6">
+                        <asp:TextBox ID="fname" runat="server" Height="24px" Width="336px" onfocusout="myFunction()"></asp:TextBox>
                     </td>
                 </tr>
                
                  <tr class="tr-data">
                     <td class="td-data">Last name:</td>
-                    <td class="td-data">
-                        <asp:TextBox ID="TextBox13" runat="server" Height="24px" Width="336px" onfocusout="myFunction1()"></asp:TextBox>
+                    <td class="auto-style6">
+                        <asp:TextBox ID="lname" runat="server" Height="24px" Width="336px" onfocusout="myFunction1()"></asp:TextBox>
                     </td>
                 </tr>
                
                  <tr class="tr-data">
                     <td class="td-data">Date of birth</td>
-                    <td class="td-data">
-                        &nbsp;<asp:TextBox ID="TextBox17" runat="server" Height="24px" Width="336px" TextMode="Date"></asp:TextBox>
+                    <td class="auto-style6">
+                        &nbsp;<asp:TextBox ID="select_date" runat="server" Height="24px" Width="336px" TextMode="Date" onChange="age_validation()"></asp:TextBox>
                     </td>
                 </tr>
                
                  <tr class="tr-data">
                     <td class="td-data">Age:</td>
-                    <td class="td-data">
-                        <asp:TextBox ID="age" runat="server" Height="24px" Width="336px"  ></asp:TextBox>
+                    <td class="auto-style6">
+                        <asp:TextBox ID="age" runat="server" Height="24px" Width="336px"   ></asp:TextBox>
                     </td>
                 </tr>
                 
                  <tr class="tr-data">
                     <td class="td-data">Gender:</td>
-                    <td class="td-data">
+                    <td class="auto-style6">
                         <asp:RadioButton ID="RadioButton1" runat="server" GroupName="Gender" Text="Male" />
 &nbsp;
                         <asp:RadioButton ID="RadioButton2" runat="server" GroupName="Gender" Text="Female" />
@@ -92,28 +211,28 @@
                 
                  <tr class="tr-data">
                     <td class="td-data">Phone number:</td>
-                    <td class="td-data">
-                        <asp:TextBox ID="TextBox15" runat="server" Height="24px" Width="336px"></asp:TextBox>
+                    <td class="auto-style6">
+                        <asp:TextBox ID="number" runat="server" Height="24px" Width="336px" TextMode="Number" onfocusout="phonenum()"></asp:TextBox>
                     </td>
                 </tr>
                 
                  <tr class="tr-data">
                     <td class="auto-style4">Email address:</td>
-                    <td class="auto-style4">
+                    <td class="auto-style7">
                         <asp:TextBox ID="email" runat="server" Height="24px" Width="336px"></asp:TextBox>
                     </td>
                 </tr>
                 
                  <tr class="tr-data">
                     <td class="auto-style4">Address:</td>
-                    <td class="auto-style4">
+                    <td class="auto-style7">
                         <asp:TextBox ID="TextBox8" runat="server" Height="69px" Width="333px" OnTextChanged="TextBox8_TextChanged" TextMode="MultiLine"></asp:TextBox>
                     </td>
                 </tr>
                 
                  <tr class="tr-data">
                     <td class="td-data">State:</td>
-                    <td class="td-data"><select id="stateSelect" onchange="updateCity()">
+                    <td class="auto-style6"><select id="stateSelect" onchange="updateCity()" class="auto-style10">
                                          <option value="">Select state</option>
                                          <option value="Kerala">Kerala</option>
                                          <option value="Tamilnadu">Tamilnadu</option>
@@ -124,7 +243,7 @@
                 
                  <tr class="tr-data">
                     <td class="td-data">District:</td>
-                    <td class="td-data"><select id="citySelect">
+                    <td class="auto-style6"><select id="citySelect" class="auto-style11">
                                          <option value="">Select a city</option>
                                          </select>
                      &nbsp;</td>
@@ -132,121 +251,51 @@
                 
                  <tr class="tr-data">
                     <td class="td-data">User name:</td>
-                    <td class="td-data">
+                    <td class="auto-style6">
                         <asp:TextBox ID="TextBox9" runat="server" Height="24px" Width="336px"></asp:TextBox>
                     </td>
                 </tr>
                 
                  <tr class="tr-data">
                     <td class="td-data">Password:</td>
-                    <td class="td-data">
-                        <asp:TextBox ID="password" runat="server" Height="24px" Width="336px"></asp:TextBox>
+                    <td class="auto-style6">
+                        <asp:TextBox ID="password" runat="server" Height="24px" Width="336px" TextMode="Password"></asp:TextBox>
                     </td>
                 </tr>
                 
                  <tr class="tr-data">
                     <td class="td-data">Confirm password:</td>
-                    <td class="td-data">
-                        <asp:TextBox ID="repassword" runat="server" Height="24px" Width="336px"></asp:TextBox>
+                    <td class="auto-style6">
+                        <asp:TextBox ID="repassword" runat="server" Height="24px" Width="336px" TextMode="Password"></asp:TextBox>
                     </td>
                 </tr>
                 
                  <tr class="tr-data">
                     <td class="td-data">&nbsp;</td>
-                    <td class="td-data">
+                    <td class="auto-style6">
                         &nbsp;</td>
                 </tr>
                 
                  <tr class="tr-data">
                     <td class="auto-style5" colspan="2">
-                        <input type="button" onclick="validation()" value="register" />
+                        <input type="button" onclick="validation()" value="Sign up" />
                      </td>
                 </tr>
             </table>
         </div>
-    </form>
-    <script>
-function myFunction() {
-    let x = document.getElementById("TextBox12");
-  x.value = x.value.toUpperCase();
-        }
-        function myFunction1() {
-            let x = document.getElementById("TextBox13");
-            x.value = x.value.toUpperCase();
-        }
-        function updateCity() {
-            var stateSelect = document.getElementById("stateSelect");
-            var citySelect = document.getElementById("citySelect");
-            var selectedstate = stateSelect.value;
+         <div class="auto-style9">
 
-            citySelect.innerHTML = '<option value="">Select a city</option>';
-            if (selectedstate === "Kerala") {
-                addCityOption("Thiruvananthapuram");
-                addCityOption("Kollam");
-                addCityOption("Pathnamthitta");
-                addCityOption("Kottayam");
-                addCityOption("Ernakulam");
-            } else if (selectedstate === "Tamilnadu") {
-                addCityOption("Ariyalur");
-                addCityOption("Chengalpattu");
-                addCityOption("Chennai");
-                addCityOption("Madurai");
-                addCityOption("Kanniyakumari");
-            } else if (selectedstate === "Karnataka") {
-                addCityOption("Bengaluru");
-                addCityOption("Mysuru");
-                addCityOption("Vijayapura");
-                addCityOption("Kalaburagi");
-                addCityOption("Ballari");
-            }
-        
-        }
-        function addCityOption(city) {
-            var citySelect = document.getElementById("citySelect");
-            var option = document.createElement("option");
-            option.text = city;
-            option.value = city;
-            citySelect.appendChild(option);
-        }
-        function validation(email) {
-           
-            //var age = document.getElementById("age").value;
-            //if (age === "") {
-            //    return true;
-            //}
-            //age = parseInt(age, 10);
-            //if (isNaN(age) || age < 1 || age > 100) {
-            //    alert("The age must be a number between 1 and 100");
-            //    return false;
-            //}
-            var email = document.getElementById("email");
-            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-            if (email.value.match(mailformat)) {
-                alert("Valid email address!");
-                                   
-               }
-                else {
-                    alert("You have entered an invalid email address!");
-               
-                 
-            }
-            var pass = document.getElementById("password").value;
-            var repass = document.getElementById("repassword").value;
-            if (pass == '') {
-                alert("Please enter Password");
-            }
-           if (repass == '') {
-                alert("Please enter confirm password");
-            }
-             if (pass != repass) {
-                alert("\nPassword did not match: Please try again...")
-                return false;
-            }
-            else {
-                alert("Password Match:");
-                return true;
-            }
-        }
-    </script>
+  <p class="p-style">Copy right protected &#169</p>
+     <img class="footer-icons" src="IMAGES/facebook.png" />
+     <img class="footer-icons"src="IMAGES/google-plus.png" />
+     <img class="footer-icons"src="IMAGES/instagram.png" />
+     <img class="footer-icons"src="IMAGES/tumblr.png" />
+  </div>
+    </form>
+
+        <script src="signupvalid.js"></script>
+        <script src="validation.js"></script>
+        <script src="Namevalidation.js"></script>
+        <script src="agevalidation.js"></script>
 </body>
 </html>

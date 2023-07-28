@@ -33,18 +33,6 @@
      li.dropdown {
        display: inline-block;
      }
-     .dropdown-content a {
-       color: black;
-       padding: 12px 16px;
-       text-decoration: none;
-       display: block;
-       text-align: left;
-     }
-
-     .dropdown-content a:hover {background-color: #f1f1f1;}
-      .style4 {
-      height:500px;
-      }
       .footer {
         position: fixed;
         left: 0;
@@ -66,17 +54,13 @@
            width: 45px;
            height: 39px;
        }
-       
-  
-
-
  </style>
 </head>
 <body style="min-height:100%">
 
     <ul>
   <li><img src="IMAGES/instagram.png" class="auto-style2"></li>
-        <li style="float:right"><a class="active" href="login.aspx">Sign in</a></li>
+        <li style="float:right"><a class="active" href="login.aspx">Login</a></li>
         <li style="float:right"><a class="active" href="aboutus">About us</a></li>
         <li style="float:right"><a class="active" href="contactus">Contact us</a></li>
         <li style="float:right"><a class="active" href="Registration.aspx">Sign up</a></li>
@@ -107,7 +91,5 @@
   </div>
     
 </body>
-    <script>
-        
-    </script>
+    
 </html>

@@ -5,14 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Aboutus</title>
-    <style type="text/css">
-        .auto-style1 {
-            font-size: x-large;
-            color: navy;
-            font-weight: bold;
-            text-decoration: underline;
-            text-align: center;
-        }
+    <link href="navbar.css" rel="stylesheet" />
+    <style type="text/css" >
         .auto-style2 {
             width: 1214px;
             height: 41px;
@@ -38,10 +32,31 @@
             color:darkblue;
         }
        
+        .auto-style6 {
+            width: 33px;
+            height: 30px;
+        }
+        body{
+            background-image: url('IMAGES/aboutus.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed; 
+            background-size: 100% 100%;
+           }
+       
     </style>
+    
 </head>
 <body>
     <form id="form1" runat="server">
+          <ul>
+  <li></li>
+        <li style="float:right"><a class="active" href="Homepage.aspx">Home</a></li>
+        <li style="float:right"><a class="active" href="login.aspx">Login</a></li>
+        <li style="float:right"><a class="active" href="contactus">Contact us</a></li>
+        <li style="float:right"><a class="active" href="Registration.aspx">Sign up</a></li>
+              <li>
+              <img src="IMAGES/instagram.png" class="auto-style6"></li>
+          </ul>
         <div class="auto-style2">
             <h2>About us</h2>
         </div>
@@ -56,5 +71,13 @@
        </div>
             
     </form>
+    <div class="footer">
+
+  <p class="auto-style1">Copy right protected &#169</p>
+     <img class="footer-icons" src="IMAGES/facebook.png" />
+     <img class="footer-icons"src="IMAGES/google-plus.png" />
+     <img class="footer-icons"src="IMAGES/instagram.png" />
+     <img class="footer-icons"src="IMAGES/tumblr.png" />
+  </div>
 </body>
 </html>

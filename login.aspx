@@ -118,7 +118,7 @@
                         <asp:LinkButton ID="LinkButton2" runat="server">Forgot password</asp:LinkButton>
                     </td>
                     <td>
-                        <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" ToolTip="New user">Sign up <a href="Registration.aspx" </a></asp:LinkButton>
+                        <asp:LinkButton ID="LinkButton1" runat="server" onclientclick='redirect()' ToolTip="New user" >Sign up </asp:LinkButton>
                     </td>
                 </tr>
                 <tr>
@@ -160,7 +160,11 @@
             if (valid == 0) {
                 return false;
             }
-        }  
+        } 
+        function redirect() {
+            location.href = 'Registration.aspx';
+        }
+        
     </script>
 </body>
 </html>
